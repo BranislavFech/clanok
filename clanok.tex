@@ -108,6 +108,19 @@ strane je schopné pracovať aj s dynamickým zdrojom svetla a taktiež dynamick
 pôsobiacimi ako oklúzie. Nakoľko je tento algoritmus náročný na výpočet, je v ňom 
 implementované preložené vzorkovanie na zníženie výpočtovej doby.
 
+\section{Porovnanie} 
+\label{por}
+Obe metódy spomenuté vyššie majú svoje výhody  a nevýhody.
+
+Post processing nám prináša rýchlejšie zobrazenie, keďže úprava sa deje až po tom, čo 
+je obraz vykreslený. Nevýhodou však je, že výsledky nemusia byť vždy úplné dôveryhodné 
+a na to, aby tento algoritmus fungoval, musí byť zdroj svetla v obraze. 
+
+V prípade použitia mapovania tieňov je nevýhodou pomalšie zobrazenie kvôli nutnosti 
+mapovania každého svetlného lúča zvlášť. Výhody prinášané týmto algoritmom sú oveľa 
+prirodzenejšie výsledky spolu s tým, že je schopný pracovať s pohyblivým svetelným 
+zdrojom aj keď sa nenachádza v zornom poli hráča, narodziel od post-processingu.
+
 
 %\acknowledgement{Ak niekomu chcete poďakovať\ldots}
 
