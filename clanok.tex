@@ -88,6 +88,27 @@ alebo nie.
     \label{fig:kl}
 \end{figure}
 
+\section{Spracovanie} \label{spracovanie}
+V prípade spracovania krepuskulárnych lúčov na obyčajnej fotografii nie je zložitosť 
+nejako vysoká, nakoľko výsledok nemusí byť hotový v zlomku sekundy. Avšak hry sú niečo 
+iné. Úlohou je vypracovať daný obraz čo najhodnovernejšie a zároveň s čo najväčším 
+realizmom.
+
+\subsection{Post-processing} \label{spracovanie:pp}
+Táto metóda je bohžiaľ funkčná len v prípade, že zdroj svetla sa nachádza v obraze, 
+teda zlyhá, ak zdroj nie je viditeľný. Na druhej strane, výhoda tejto metódy spočíva v 
+tom, že úprava obrázka nijako neovplyvňuje čas vykresľovania obrázka, nakoľko sú 
+krepuskulárne lúče jednoduchými "efektami" len pridané do obrázka.
+
+\subsection{Mapovanie tieňov} \label{spracovanie:mt}
+V roku 2009 bola prednesená ďalšia metóda na spracovanie krepuskulárnych lúčov v reálnom 
+čase pomocou mapovania tieňov. Tie slúžia na detekciu oklúzie alebo "prekážky" vo svetelných 
+lúčoch. Tento algoritmus je síce schopný fungovať len v homogénnom prostredí, ale na druhej 
+strane je schopné pracovať aj s dynamickým zdrojom svetla a taktiež dynamickými predmetami 
+pôsobiacimi ako oklúzie. Nakoľko je tento algoritmus náročný na výpočet, je v ňom 
+implementované preložené vzorkovanie na zníženie výpočtovej doby.
+
+
 %\acknowledgement{Ak niekomu chcete poďakovať\ldots}
 
 
