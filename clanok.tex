@@ -48,20 +48,20 @@ vybavenie.
 \section{Úvod}
 Málokto by nesúhlasil s tvrdením, že svetlo je jednou z, ak nie najdôležitejšou 
 zložkou skvelo graficky spracovanej hry. Narozdiel od nedokončených textúr, alebo 
-nedostatku detialov, svetlo možno nespozorujeme na prvý pohľad. Môžeme si len povedať, 
+nedostatku detailov, svetlo možno nespozorujeme na prvý pohľad. Môžeme si len povedať, 
 že je niečo inak, ako by malo byť a už to robí hrou menej hodnotnou. V tejto práci sa 
 budem zameriavať na zložitejšie prípady svetelných efektov a spôsoby ich vyobrazenia.
 
 \section{Svetelné efekty} \label{se}
 Svetlo sa neustále odráža alebo láme od všetkých hmotných vecí. Väčšina svetelných 
 efektov pre nás nie je ničím zaujímavá, keďže sa s nimi stretávame každý deň. Sú ale 
-aj také, pri ktorch si môžeme povedať, že sme sa ocitli v správny čas na správnom mieste.
+aj také, pri ktorých si môžeme povedať, že sme sa ocitli v správny čas na správnom mieste.
 Tieto efekty dodávajú  pozorvateľovi uchvacujúci a jedinečný pocit, teda robia daný 
 moment viac pamätania hodný.
 
 \subsection{Kaustika} \label{se:kaustika}
 Kaustika je jedným zo svetelných efektov, ktoré môžeme pozorovať napríklad keď svetlo 
-prechádza pohárom, alebo na dne bazéna za predpokladu, že voda je číra. Vzníká, keď sa 
+prechádza pohárom, alebo na dne bazéna za predpokladu, že voda je číra. Vzniká, keď sa 
 svetlo odráža alebo sa láme pri prechode médiom a tieto lúče sa zbiehajú v jednom mieste, 
 teda daná plocha je viac osvetlená.
 
@@ -69,8 +69,8 @@ teda daná plocha je viac osvetlená.
 Svetelné lúče je možné pozorovať v scenérii, kedy je väčšina svetla blokovaná istým 
 objektom, napríklad stenou. Avšak časť svetla, ktorá nie je blokovaná, napríklad svetlo 
 prechádzajúce oknom, alebo deravou strechou, je viditeľná v podobne jedného alebo viacerých 
-svetlných lúčov. To vytvára kontrast medzi tmavou časťou scenérie a jedným alebo viacrými 
-svetlnými lúčami.
+svetelných lúčov. To vytvára kontrast medzi tmavou časťou scenérie a jedným alebo viacerými 
+svetelnými lúčmi.
 
 \subsubsection{Krepuskulárne lúče} \label{se:luce:kl}
 Krepuskulárne lúče sú špecifickým prípadom výskytu svetelných lúčov. V tomto prípade 
@@ -95,7 +95,7 @@ iné. Úlohou je vypracovať daný obraz čo najhodnovernejšie a zároveň s č
 realizmom.
 
 \subsection{Post-processing} \label{spracovanie:pp}
-Táto metóda je bohžiaľ funkčná len v prípade, že zdroj svetla sa nachádza v obraze, 
+Táto metóda je bohužiaľ funkčná len v prípade, že zdroj svetla sa nachádza v obraze, 
 teda zlyhá, ak zdroj nie je viditeľný. Na druhej strane, výhoda tejto metódy spočíva v 
 tom, že úprava obrázka nijako neovplyvňuje čas vykresľovania obrázka, nakoľko sú 
 krepuskulárne lúče jednoduchými "efektami" len pridané do obrázka.
@@ -104,7 +104,7 @@ krepuskulárne lúče jednoduchými "efektami" len pridané do obrázka.
 V roku 2009 bola prednesená ďalšia metóda na spracovanie krepuskulárnych lúčov v reálnom 
 čase pomocou mapovania tieňov. Tie slúžia na detekciu oklúzie alebo "prekážky" vo svetelných 
 lúčoch. Tento algoritmus je síce schopný fungovať len v homogénnom prostredí, ale na druhej 
-strane je schopné pracovať aj s dynamickým zdrojom svetla a taktiež dynamickými predmetami 
+strane je schopné pracovať aj s dynamickým zdrojom svetla a taktiež dynamickými predmetmi 
 pôsobiacimi ako oklúzie. Nakoľko je tento algoritmus náročný na výpočet, je v ňom 
 implementované preložené vzorkovanie na zníženie výpočtovej doby.
 
@@ -117,14 +117,14 @@ je obraz vykreslený. Nevýhodou však je, že výsledky nemusia byť vždy úpl
 a na to, aby tento algoritmus fungoval, musí byť zdroj svetla v obraze. 
 
 V prípade použitia mapovania tieňov je nevýhodou pomalšie zobrazenie kvôli nutnosti 
-mapovania každého svetlného lúča zvlášť. Výhody prinášané týmto algoritmom sú oveľa 
+mapovania každého svetelného lúča zvlášť. Výhody prinášané týmto algoritmom sú oveľa 
 prirodzenejšie výsledky spolu s tým, že je schopný pracovať s pohyblivým svetelným 
 zdrojom aj keď sa nenachádza v zornom poli hráča, narodziel od post-processingu.
 
 \section{Zhrnutie} 
 \label{zhr}
 Dilemou je rozhodnúť sa medzi pomalším, ale prirodzenejším, alebo rýchlejším, ale 
-menej uspokojivým výsledkom. Je logické držať sa blízko fyzicky krektného zobrazenia 
+menej uspokojivým výsledkom. Je logické držať sa blízko fyzicky korektného zobrazenia 
 týchto svetelných efektov pre čo najlepšie výsledky. No vykresľovanie týchto scenérií 
 v reálnom čase je aj v dnešnej dobe v stave, kedy je veľa miesta pre ďalší rozvoj.
 
