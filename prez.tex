@@ -161,6 +161,32 @@ Toto je len príklad slajdov. Ako urobiť dobrú prezentáciu bolo vysvetlené n
 \end{center}
 \end{frame}
 
+\section{Spracovanie}
+
+\begin{frame}[fragile=singleslide]\frametitle{Post-processing}
+\begin{itemize}
+\item Krepuskulárne lúče sú len pridané do obrázka využitím jednoduchých efektov
+\item Rýchle vykresľovanie
+\item Funkčné len ak je zdroj svetla v obraze
+\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile=singleslide]\frametitle{Mapovanie tieňov}
+\begin{itemize}
+\item Detekcia oklúzie vo svetelných lúčoch
+\item Funkčný len v homogénnom prostredí, ale
+	\begin{itemize}
+	\item Schopný pracovať s dynamickým zdrojom svetla
+	\item Schopný pracovať s dynamickým predmetom pôsobiacim ako oklúzia
+	\end{itemize}
+\item Náročný na výpočet
+\begin{itemize}
+	\item Preložené vzorkovanie na zníženie výpočtovej doby
+	\end{itemize}
+\end{itemize}
+\end{frame}
+
+
 \begin{frame}[fragile=singleslide]\frametitle{Slajd len s obrázkom}
 %\includegraphics[scale=.35]{diagram.pdf}
 % pridajte vlastný obrázok a zrušte znák % pred príkazom \includegraphics vo formáte PDF prípadne PNG alebo JPG
