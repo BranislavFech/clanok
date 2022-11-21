@@ -186,81 +186,27 @@ Toto je len príklad slajdov. Ako urobiť dobrú prezentáciu bolo vysvetlené n
 \end{itemize}
 \end{frame}
 
+\section{Porovnanie}
 
-\begin{frame}[fragile=singleslide]\frametitle{Slajd len s obrázkom}
-%\includegraphics[scale=.35]{diagram.pdf}
-% pridajte vlastný obrázok a zrušte znák % pred príkazom \includegraphics vo formáte PDF prípadne PNG alebo JPG
-% scale určuje veľkosť obrázku
-
-{\tiny Nejaká poznámka k obrázku, možno zdroj\ldots}
+\begin{frame}[fragile=singleslide]\frametitle{Výhody a nevýhody oboch metód}
+\begin{center}
+\includegraphics[scale=.65]{tabulla.png}
+\end{center}
 \end{frame}
 
 
-\begin{frame}[fragile=singleslide]\frametitle{Zvýraznenie syntaxe}
+\section*{Zhodnotenie}
+
+\begin{frame}[fragile=singleslide]\frametitle{Zhodnotenie}
 \begin{itemize}
-\item Na zvýraznenie syntaxe stačí použiť balík listings so správne nastaveným programovacím jazykom
-\begin{lstlisting}
-int na_druhu(int i) {
-   return i * i;
-}
-
-int main() {
-   printf("%d", na_druhu(118));
-   return 0;
-}
-\end{lstlisting}
-
-\item Jazyk C++ je ešte zaujímavejší: je multiparadigmový\footcite{\url{J. O. Coplien. Multi-Paradigm Design for C++. Addison-Wesley, 1998.}}
-\end{itemize}
-\end{frame}
-
-
-\begin{frame}[fragile=singleslide]\frametitle{Rámiky}
-\begin{poznamka}
-Text možno uviesť v rámiku
-\end{poznamka}
-
-\begin{itemize}
-\item Program
-
-\begin{program}
-\begin{lstlisting}
-void main() {
-   printf("%d", na_druhu(118));
-}
-
-void na_druhu(int i) {
-   return i * i;
-}
-\end{lstlisting}
-\end{program}
-
-\item Výstup
-\begin{vystup}
-\begin{lstlisting}
-13924
-\end{lstlisting}
-\end{vystup}
-
-\end{itemize}
-\end{frame}
-
-
-
-\section*{Zhodnotenie a ďalšia práca}
-% hviezdička zabezpečí, aby sa táto časť neocitla v prehľade prezentácie - každá prezentácia má zhodnotenie a prehľad by sa tým zbytočne zahlcoval
-
-\begin{frame}[fragile=singleslide]\frametitle{Zhodnotenie a ďalšia práca}
-\begin{itemize}
-\item Každá prezentácia musí byť nejako uzavretá
-\item Ale vždy je čo robiť ďalej\ldots{}
+\item Je potrebné rozhodnúť sa medzi\ldots{}
+    \begin{itemize}
+    \item Pomalším ale prirodzenejším riešením
+    \item Rýchlejším ale menej uspokojivým riešením
+    \end{itemize}
+\item Ale je aj v dnešnej dobe veľa miesta pre rozvoj\ldots{}
 \end{itemize}
 \end{frame}
 
 
 \end{document}
-
-
-
-
-Text \end{document} za príkazom \end{document} LaTeX ignoruje, takže tu môžete odkladať veci (aj celé slajdy), ktoré nechcete vymazať, lebo ich ešte možno budete potrebovať, avšak ich v danom momente nechcete mať v slajdoch.
