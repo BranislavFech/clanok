@@ -46,40 +46,48 @@ vybavenie.
 
 
 \section{Úvod}
-Málokto by nesúhlasil s tvrdením, že svetlo je jednou z, ak nie najdôležitejšou 
-zložkou skvelo graficky spracovanej hry. Narozdiel od nedokončených textúr, alebo 
-nedostatku detailov, svetlo možno nespozorujeme na prvý pohľad. Môžeme si len povedať, 
-že je niečo inak, ako by malo byť a už to robí hrou menej hodnotnou. V tejto práci sa 
-budem zameriavať na zložitejšie prípady svetelných efektov a spôsoby ich vyobrazenia.
+Málokto by nesúhlasil s tvrdením, že svetlo je jednou z, ak nie najdôležitejšou zložkou 
+skvelo graficky spracovanej hry. Narozdiel od nedokončených textúr, alebo nedostatku 
+detialov, svetlo možno nespozorujeme na prvý pohľad. Môžeme si len povedať, že je niečo 
+inak, ako by malo byť a už to robí hrou menej hodnotnou. V tejto práci sa budem zameriavať 
+na zložitejšie prípady svetelných efektov a spôsoby ich vyobrazenia.
 
 \section{Svetelné efekty} \label{se}
-Svetlo sa neustále odráža alebo láme od všetkých hmotných vecí. Väčšina svetelných 
-efektov pre nás nie je ničím zaujímavá, keďže sa s nimi stretávame každý deň. Sú ale 
-aj také, pri ktorých si môžeme povedať, že sme sa ocitli v správny čas na správnom mieste.
-Tieto efekty dodávajú  pozorvateľovi uchvacujúci a jedinečný pocit, teda robia daný 
-moment viac pamätania hodný.
+Svetlo sa neustále odráža alebo láme od všetkých hmotných vecí. Väčšina svetelných efektov 
+pre nás nie je ničím zaujímavá, keďže sa s nimi stretávame každý deň. Sú ale aj také, pri 
+ktorch si môžeme povedať, že sme sa ocitli v správny čas na správnom mieste. Tieto efekty 
+dodávajú  pozorvateľovi uchvacujúci a jedinečný pocit, teda robia daný moment viac pamätania 
+hodný.
 
 \subsection{Kaustika} \label{se:kaustika}
 Kaustika je jedným zo svetelných efektov, ktoré môžeme pozorovať napríklad keď svetlo 
-prechádza pohárom, alebo na dne bazéna za predpokladu, že voda je číra. Vzniká, keď sa 
+prechádza pohárom, alebo na dne bazéna za predpokladu, že voda je číra. Vzníká, keď sa 
 svetlo odráža alebo sa láme pri prechode médiom a tieto lúče sa zbiehajú v jednom mieste, 
-teda daná plocha je viac osvetlená.
+teda daná plocha je viac osvetlená. Dá sa označiť za jednoduchšiu verziu toho, čo bude 
+nasledovať, teda krespuskulárnych lúčov. V niektorých literatúrach sa tieto lúče označujú 
+aj ako "3D kaustika."
 
 \subsection{Svetelné lúče} \label{se:luce}
 Svetelné lúče je možné pozorovať v scenérii, kedy je väčšina svetla blokovaná istým 
 objektom, napríklad stenou. Avšak časť svetla, ktorá nie je blokovaná, napríklad svetlo 
-prechádzajúce oknom, alebo deravou strechou, je viditeľná v podobne jedného alebo viacerých 
-svetelných lúčov. To vytvára kontrast medzi tmavou časťou scenérie a jedným alebo viacerými 
-svetelnými lúčmi.
+prechádzajúce oknom, alebo deravou strechou, je viditeľná v podobe jedného alebo viacerých 
+svetlných lúčov. To vytvára kontrast medzi tmavou časťou scenérie a jedným alebo viacrými 
+svetlnými lúčami. Avšak pre výskyt týchto lúčov je potrebné, aby sa vo vzduchu nachádzali 
+častice prachu alebo ine mikročastice, keďže od nich sa prechádzajúce svetlo odráža a 
+len vďaka nim sú tieto lúče viditeľné.
 
 \subsubsection{Krepuskulárne lúče} \label{se:luce:kl}
-Krepuskulárne lúče sú špecifickým prípadom výskytu svetelných lúčov. V tomto prípade 
-svetlo nie je blokované pevným objektom, ale oblakmi. Čo robí tento prípad svetelných 
-lúčov zaujímavým a pre výpočtovú grafiku náročným je skutočnosť, že oblaky nie sú 
-nepriehľadné, ale priesvitné. Teda svetlo je pohlcované v iných množstvách, niekde 
-viac a niekde menej, takže svetelné lúče sa vyskytujú v rôznych intenzitách. Narozdiel 
-od svetla blokovaného budovou, kde sa môžu vyskytnúť len 2 prípady- buď svetlo prechádza, 
-alebo nie.
+Krepuskulárne lúče sú špecifickým prípadom výskytu svetelných lúčov. V tomto prípade svetlo 
+nie je blokované pevným objektom, ale oblakmi. Čo robí tento prípad svetelných lúčov 
+zaujímavým a pre výpočtovú grafiku náročným je skutočnosť, že oblaky nie sú nepriehľadné, 
+ale priesvitné. Teda svetlo je pohlcované v iných množstvách, niekde viac a niekde menej, 
+takže svetelné lúče sa vyskytujú v rôznych intenzitách. Narozdiel od svetla blokovaného 
+budovou, kde sa môžu vyskytnúť len 2 prípady- buď svetlo prechádza, 
+alebo nie.\cite{Crepuscular_rays}
+
+Tieto lúče sa môžu ojedinele vyskytovať aj vo vode v prípade, ak sme na vodnom dne a 
+pozeráme sa smerom hore. V taktejto situácii pôsobí voda ako médium a zároveň ako 
+rozptyľovač svetelných lúčov. 
 
 \begin{figure}[h]
     \centering
@@ -92,32 +100,35 @@ alebo nie.
 V prípade spracovania krepuskulárnych lúčov na obyčajnej fotografii nie je zložitosť 
 nejako vysoká, nakoľko výsledok nemusí byť hotový v zlomku sekundy. Avšak hry sú niečo 
 iné. Úlohou je vypracovať daný obraz čo najhodnovernejšie a zároveň s čo najväčším 
-realizmom.
+realizmom. Musí to vyzerať hodnoverne, v opačnom prípade skončíme s hrou, ktorú už 
+kvôli jej neprirodzenému spracovaniu týchto lúčov už nezapneme.
 
 \subsection{Post-processing} \label{spracovanie:pp}
 Táto metóda je bohužiaľ funkčná len v prípade, že zdroj svetla sa nachádza v obraze, 
-teda zlyhá, ak zdroj nie je viditeľný. Na druhej strane, výhoda tejto metódy spočíva v 
-tom, že úprava obrázka nijako neovplyvňuje čas vykresľovania obrázka, nakoľko sú 
-krepuskulárne lúče jednoduchými "efektami" len pridané do obrázka\cite{Light_shafts}.
+teda zlyhá, ak zdroj nie je viditeľný. Na druhej strane, výhoda tejto metódy spočíva 
+v tom, že úprava obrázka nijako neovplyvňuje čas vykresľovania obrázka, nakoľko sú 
+krepuskulárne lúče jednoduchými "efektami" len pridané do obrázka. Táto metóda spočíva 
+v rozmazaní obrázka horizontálne aj vertikálne a následným zosvetlením na simuláciu 
+lúčov.\cite{Light_shafts}.
 
 \subsection{Mapovanie tieňov} \label{spracovanie:mt}
-V roku 2009 bola prednesená ďalšia metóda na spracovanie krepuskulárnych lúčov v reálnom 
-čase pomocou mapovania tieňov. Tie slúžia na detekciu oklúzie alebo "prekážky" vo svetelných 
-lúčoch. Tento algoritmus je síce schopný fungovať len v homogénnom prostredí, ale na druhej 
-strane je schopné pracovať aj s dynamickým zdrojom svetla a taktiež dynamickými predmetmi 
-pôsobiacimi ako oklúzie. Nakoľko je tento algoritmus náročný na výpočet, je v ňom 
+V roku 2009 bola prednesená ďalšia metóda na spracovanie krepuskulárnych lúčov v 
+reálnom čase pomocou mapovania tieňov. Tie slúžia na detekciu oklúzie alebo "prekážky" 
+vo svetelných lúčoch. Tento algoritmus je síce schopný fungovať len v homogénnom prostredí, 
+ale na druhej strane je schopné pracovať aj s dynamickým zdrojom svetla a taktiež dynamickými 
+predmetami pôsobiacimi ako oklúzie. Nakoľko je tento algoritmus náročný na výpočet, je v ňom 
 implementované preložené vzorkovanie na zníženie výpočtovej doby\cite{God_rays}.
 
 \section{Porovnanie} 
 \label{por}
 Obe metódy spomenuté vyššie majú svoje výhody  a nevýhody.
 
-Post processing nám prináša rýchlejšie zobrazenie, keďže úprava sa deje až po tom, čo 
-je obraz vykreslený. Nevýhodou však je, že výsledky nemusia byť vždy úplné dôveryhodné 
-a na to, aby tento algoritmus fungoval, musí byť zdroj svetla v obraze. 
+Post processing nám prináša rýchlejšie zobrazenie, keďže úprava sa deje až po tom, čo je 
+obraz vykreslený. Nevýhodou však je, že výsledky nemusia byť vždy úplné dôveryhodné a na to, 
+aby tento algoritmus fungoval, musí byť zdroj svetla v obraze. 
 
 V prípade použitia mapovania tieňov je nevýhodou pomalšie zobrazenie kvôli nutnosti 
-mapovania každého svetelného lúča zvlášť. Výhody prinášané týmto algoritmom sú oveľa 
+mapovania každého svetlného lúča zvlášť. Výhody prinášané týmto algoritmom sú oveľa 
 prirodzenejšie výsledky spolu s tým, že je schopný pracovať s pohyblivým svetelným 
 zdrojom aj keď sa nenachádza v zornom poli hráča, narodziel od post-processingu.
 
@@ -165,7 +176,7 @@ lepšie výsledky ako samostatnou prácou.
 \bibliography{literatura}
 \bibliographystyle{abbrv} % prípadne alpha, abbrv alebo hociktorý iný
 
-\begin{figure}
+\begin{figure}[p]
     \centering
     \includegraphics[scale=0.8]{Kresba1.png}
     \caption{Diagram}
